@@ -1,0 +1,1792 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+
+a {
+     text-decoration: none;
+}
+
+#ACNC{
+    width: 75px;
+    height: 75px;
+}
+
+#article-contact{
+   font-size: 1.3em; 
+}
+
+#article-home {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /*the grid here neatly puts everything into a square in a grid that is three parts wide and two in height*/
+    grid-gap: 60px;
+    /*grid gaps separate the rows and columns much like a margin would but it is responsive and can shrink much like flex boxes do*/
+    margin-bottom: 100px;
+}
+
+#article-training{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 50px 0px;
+    grid-row-gap: 20px;
+    grid-column-gap: 70px;
+}
+
+#article-img1, #article-img2, #article-img3, #article-img4, #article-img5, #article-img6{
+    width: 100%;
+    height: auto;
+    transition-property: all;
+    transition-duration: 0.5s;
+    /*the transition duration property gives an ease-in effect to the transition by changing the duration*/
+}
+
+.article-blog1{
+   display: flex;
+    flex-direction: column;
+    grid-column: 3/5;
+    grid-row: 1/2;
+    /*grid column and rows property need to correspond to a grid template property on the parent and they tell the browser which coordinates to plot the element on*/
+}
+
+.article-blog2{
+   display: flex;
+    flex-direction: column;
+    grid-column: 3/5;
+    grid-row: 2/3;
+}
+
+.article-blog3{
+    display: flex;
+    flex-direction: column;
+    grid-column: 3/5;
+    grid-row: 3/4;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*flex boxes are a convenient method to make the elements automatically re-configure themselves to changes in screen size. they are also useful for quickly aligning and distributing elements*/
+    height: auto;
+    grid-column: 5/6;
+    grid-row: span 4;
+    background-color: rgb(245,219,68);
+    padding: 30px; 
+}
+
+aside button, aside select, aside input{
+    height: 40.2px; 
+    border-radius: 0px;
+    border-style: none;
+}
+
+aside button{
+    width: 55px;
+}
+
+#b1{
+    animation: b1 18s infinite;
+    /*the animation property is shorthand for the animation name, its duration and if it should loop or not*/
+}
+
+#b2{
+    animation: b2 18s infinite;
+}
+
+#b3{
+    animation: b3 18s infinite;
+}
+
+.banner{
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    background-color: rgb(93,115,245);
+    /*using rgb for any color property allows you to fine tune the colour you want. hexidecimals are also good for getting a precise colour*/
+}
+
+.banner2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+#banner-featured{
+    padding: 50px 70px 100px 70px;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    justify-content: center;
+    background-color: rgb(245,219,68);
+}
+
+#banner-supporters{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    background-color: rgb(245,219,68);
+}
+
+#banner-supporters div{
+    width: 60%;
+
+}
+
+#banner-supporters h3{
+    font-size: 2em;
+}
+
+#banner-featured p:first-child{
+    flex-basis: 100%;
+    /*the last child pseudo element selects the first div from its parents. these are good ways of distinguishing identical sibling elements that you want to apply properties to*/
+}
+
+#banner-featured div:last-child{
+    width: 60%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banner-featured p{
+    width: 70%;
+}
+
+#banner-featured a{
+    align-self: center;
+}
+
+#banner-featured h2{
+    font-size: 2.5em;
+    width: 70%
+}
+
+.banner-image{
+    width: 993.6px;
+    height: 441.6px;
+}
+
+.banner-image img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: auto;
+}
+
+#banner-test{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245,219,68);
+    height: auto;
+}
+
+#banner-test section:nth-child(odd) {
+     /*the nth child pseudo class with an odd value allows me to select every sibling with in order that is an odd number*/
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#banner-test section:nth-child(even) {
+    /*the nth child pseudo class with an odd value allows me to select every sibling with in order that is an even number*/
+    flex-basis: 100%;
+    /*the flex basis is how much the initial length of the element is. it's set in a percentage that means it can shrink or grow but maintain its proportions which gives it an edge over the width property. the amount it grows or shrinks  can be further fine tuned with flex grow and flex shrink properties*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Inria Sans', sans-serif;
+    /*i have set a specific font here and if the browser can not display it for any reason then it will use a generic sans-serif font*/
+}
+
+#blog{
+    display: grid;
+    grid-template-columns: 2fr, 2fr, 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 100px;
+    margin-bottom: 200px;
+    margin-left: 50px;
+}
+
+#blog-bottom{
+    font-size: 2em;
+    font-weight: 500;
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+#blog-bottom a{
+    text-decoration:underline;
+}
+
+#blog-tags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*flex wrap means when the elements run out of room on their main axis additional rows beneath are formed instead of the elements sticking out of the container causing an overflow*/
+    margin-top: 15px;
+}
+
+#blog-tags div{
+    padding: 12px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-color: rgb(245,153,43);
+    color: white;
+    font-size: 0.9em;
+}
+
+.blogimg1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 100%;
+    height: auto;
+}
+
+.blogimg2{
+    width: 100%;
+    height: auto;
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.blogimg3{
+    width: 100%;
+    height: auto;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+.button-L {
+    padding: 19px 30px;
+    background-color: rgb(245,153,43);
+    color: white;
+    font-size: 1.3em;
+    border-radius: 15px;
+    border-style: none;
+}
+
+.button-pay {
+    padding: 28px 28px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    color: black;
+    font-size: 1.3em;
+    border-radius: 15px;
+    border-style: none;
+}
+
+.button-pay:hover {
+    color: white;
+    background-color: rgb(245,153,43);
+    /*the hover pseudo class contains properties that are applied when the condition is met of the element being hovered over*/
+}
+
+.button {
+    padding: 15px 26px;
+    margin-top: 30px;
+    background-color: rgb(245,153,43);
+    color: white;
+    font-size: 1.2em;
+    border-radius: 15px;
+}
+
+#card-prompt{
+    background-image: url("bcc_image/credit-card-payment-icon.svg");
+    /*background images are an easy way of adding images to containers. you usually want to set them to not repeat if the container is larger than the image and tweak the position and the image size*/
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: 30.75px 19.75px;
+      border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 1.6px;
+}
+
+.contain-articleimg{
+    overflow: hidden;
+}
+
+.contain-rsc-img{
+    flex: 1 3 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contain-rsc-img img{
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+}
+
+#contain-feat-img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    /*rgba is like rgb but the a represents the alpha channel which allows for various opacities. the shadow is a subtle effect that can be extended along the x and y axis by increasing the pixels*/
+}
+
+#contain-services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contain-services div{
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form{
+    width: 637.2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+#contact-form div:last-child{
+     flex-basis: 100%;
+    text-align: center;
+    /*the last child pseudo element selects the last div from its parents*/
+}
+
+#events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*the align items property aligns elements on the cross axis, in this case that is their horizontal orientation*/
+    justify-content: space-evenly;
+    /*the justify content property aligns elements on their main axis, in this case that is vertical because the flex is specified to columns*/
+    background-color: rgb(93,115,245);
+    color: white;
+    width: 100%;
+    height: auto;
+}
+
+#events figure{
+    width: auto;
+    height: 80%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.events-img{
+    height: auto;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    background-color: rgb(93,115,245);
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 400px;
+    padding: 15px 25px;
+    justify-content: space-evenly;
+}
+
+#footr-image {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#footr-image img{
+    height: 200px;
+    width: 200px;
+}
+
+#footer-text{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#footer-text2{
+    font-size: 1.1em;
+    flex-basis: 70%;
+   }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+footer p{
+    color: white;
+}
+
+footer>p{
+    flex-basis: auto;
+    width: 80%;
+    align-self: center;
+}
+
+#footer-wrap {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-media, #contact-media{
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-media img{
+    width: 55px;
+    height: 55px;
+}
+
+#footer-wrap-link{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.greyed-out{
+    color: darkgray;
+}
+
+h1{
+    font-size: 3em;
+    margin-top: 50px;
+}
+
+h2{
+    font-size: 1.7em;
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.header-h1{
+    width: 80%
+}
+
+.header-h1-home{
+    text-align: center;
+    /*the text align property acts a bit like justify content but only for text*/
+    width: 85%;
+}
+
+header h2{
+    font-size: 3em;
+    width: 85%;
+}
+
+header p{
+    width: 85%;
+}
+
+header .banner{
+    margin-top: 0;
+}
+
+#hero{
+    background-image: linear-gradient(to right, rgba(20,20,20,0.5), rgba(20,20,20,0.5)), url("bcc_image/Girl-Looking-Up-Thinkstock-scaled-e1604018067685.jpg");
+    /*the linear gradient allows me to darken the background image to accomodate the text on front without having to take it into an image editing program*/
+    background-position: bottom;
+    width: 60vw;
+    height: 80vh;
+    /*view height and view width are alternate values to use for responsive designs. much like a percentage they say the element should take up a certain portion of the container which is maintained with re-sizing*/
+    color: white;
+    font-size: 0.8em;
+}
+
+i{
+    font-size: 1.2em;
+}
+
+#iframe-rsc{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+   width: 840px; 
+    height: 472.5px; 
+    margin-top: 100px;
+    margin-bottom: 350px;
+    border: none;
+}
+
+.long-input {
+    width: 270px;
+    height: 35px;
+}
+
+
+label {
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
+label span {
+    color: red;
+}
+
+#logos-client{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+
+#logos-client img{
+    grid-area: span 1/ span 1;
+    /*the images are told to take up one whole square vertically and horizontally on the grid. this is useful for quickly positioning similar elements without giving them ids and manually instructing them what to do*/
+    width: 100%;
+    height: auto;
+}
+
+#map-contain iframe{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    width: 600px;
+    height: 450.4px;
+}
+
+#map-contain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(93,115,245);
+    margin-top: 80px;
+    padding: 100px 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+main+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+#media-logo-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav {
+    background-color: rgb(93,115,245);
+    display: flex;
+    flex-direction: row;
+    font-size: 1.6em;
+    justify-content: space-between;
+    height: 150px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    /*the z index says that the nav bar should be placed in front of the other elements because it has the highest value which is in this case 2*/
+}
+
+#nav-mobile{
+    display: none;
+    padding-bottom: 15px;
+    }
+
+#nav-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#nav-footer a {
+    font-size: 1.3em;
+}
+
+#nav-top {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex: 2 1 70%;
+    /*the flex property is shorthand for flex grow, flex shrink and flex basis*/
+    justify-content: space-between;
+    align-self: flex-end;
+    padding-bottom: 30px;
+    padding-right: 20px;
+}
+
+#nav-logo, #nav-logo-condensed{
+    justify-content: flex-start;
+    padding-left: 20px;
+    flex: 1 2 30%;
+    align-self: center;
+}
+
+#nav-logo{
+    display: flex;
+}
+
+nav label{
+    display: none;
+}
+
+#nav-logo a img{
+    width:  269.5px;
+    height: 100.45px;
+}
+
+#nav-logo-condensed a img{
+    width:  100px;
+    height: 100px;
+}
+
+#nav-logo-condensed{
+    display: none;
+}
+
+.nav-a {
+    color: white;
+}
+
+.nav-a:hover {
+    color: rgb(245,223,93);
+    animation: fadeIn 1.5s;
+    /*the animation property gives it a name which corresponds to the appropriate keyframes and an animation duration*/
+}
+
+p span{
+    color: rgb(245,223,93);
+}
+
+.profile-pic{
+    grid-column: 1/2;
+    grid-row: span 1;
+    width: 100%;
+    height: auto;
+    /*setting the width to a value and setting the height to auto allows for automatic resizing of an image or any element along with its parent container*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+#payment-form{
+    margin-top: 80px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#payment-form div:last-of-type{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+#payment-form h3{
+    width: 100%;
+}
+
+.quote{
+    display: flex;
+    height: auto;
+    font-size: 0.9em;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    font-weight: lighter;
+    flex-basis: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.quote span{
+    align-self: flex-start;
+    height: 80px;
+    color: rgb(93,115,245);
+    font-family: 'Montagu Slab', serif;
+}
+
+.quote p{
+    align-self: flex-end;
+}
+
+.quote b{
+   font-size: 5em;
+}
+
+.resources-content{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+    width: 65%;
+    align-self: center;
+}
+
+.resources-content br, #banner-featured br{
+    margin: 10px 0px;
+}
+
+.resources-content>div:first-child{
+    flex: 3 1 40%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.resources-content h2{
+    width: 100%;
+}
+
+.subsc-form{
+     width: 700px;
+    height: 700px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search {
+    height: 20px;
+    width: 20px;
+}
+
+.search-bar input{
+    width: 160px;
+}
+
+.search-bar button{
+   height: 40.2px;
+    width: 40.2px;
+    margin: 0;
+}
+
+#search-bar1{
+    flex-basis: 25%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+
+#search-bar2{
+    display: none;
+    height: 45px;
+    align-items: center;
+}
+
+#search-bar2 input{
+    padding: 0px;
+    border: 0px;
+    height: 40.2px;
+}
+
+.section{
+    width: 70%;
+}
+
+#section-about-cont{
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    grid-template-rows: repeat(6, 1fr);
+    /*using the repeat value allows for repitions to be made in the portions of the grid*/
+    background-color: rgb(93,115,245);
+    padding: 50px 100px;
+    grid-row-gap: 45px;
+    align-items: center;
+    width: 70%;
+    height: auto;
+}
+
+#section-home-1:hover #article-img1{
+    transform: scale(1.3,1.3)
+        /*here the second selector has its properties applied when the second selector is activated. when the link is hovered over it causes a change to an adjacent element in its scale*/
+}
+
+#section-home-2:hover #article-img2{
+   transform: scale(1.3,1.3)
+}
+
+#section-home-3:hover #article-img3{
+   transform: scale(1.3,1.3)
+}
+
+#section-home-4:hover #article-img4{
+    transform: scale(1.3,1.3)
+}
+
+#section-home-5:hover #article-img5{
+    transform: scale(1.3,1.3)
+}
+
+#section-home-6:hover #article-img6{
+    transform: scale(1.3,1.3)
+}
+
+.section-home{
+    grid-area: span 1/ span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-supporters{
+    background-color: lightgrey;
+    padding: 50px 100px;
+    width: 40%;
+    align-items: center;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bolder;
+    /*you can change font weight by marking them up in the html or you can do it with this property in CSS*/
+}
+
+.section-supporters div{
+    flex: 2 1 auto;
+    /*here the element takes up whatever space is necessary to display the content and will grow proportionately larger than other siblings in the flex container*/
+    display: flex;
+    justify-content: center;
+    background-color: darkgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    color: whitesmoke;
+    font-size: 5.5em;
+}
+
+.section-supporters h2{
+    font-size: 2em;
+    margin-left: 25px;
+    flex: 1 2 50%;
+}
+
+.section-training{
+    grid-area: span 1/ span 1;
+    display: flex;
+}
+
+.section-training-mobile{
+    grid-area: span 1/ span 1;
+    display: none;
+}
+
+.section-training-mobile div{
+    display: none;
+    justify-content: space-between;
+}
+
+.section-training div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-training img, .section-training-mobile img{
+    padding-top: 20px;
+    padding-right: 18px;
+    height: 40px;
+    width: 40px;
+}
+
+.section-about{
+   display: flex;
+   flex-direction: row;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: span 1;
+    color: white;
+}
+
+.section-about h2{
+    color: rgb(245,223,93);
+    margin-left: 15px;
+    padding-left: 10px;
+    border-left: 5px solid;
+    flex: 1 2 40%;
+    }
+
+.section-about h2 span{
+    font-size: 0.8em;
+}
+
+#section-img{
+    width: 30vw;
+    height: auto;
+}
+
+.service-test-img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.section-about p{
+    flex: 2 1 60%;
+}
+
+.section-training2, #section-donation{
+    background-color: rgb(245,219,68);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 100px;
+    width: 70%;
+    align-items: center;
+}
+
+.section-training2>div, #section-donation>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    margin-right: 20px;
+}
+
+.section-home h3:hover{
+    text-decoration: underline;
+    color: rgb(245,223,93);
+}
+
+#search-bar2{
+    display: inline;
+}
+
+#slide-1{
+    position: absolute;
+    /*the absolute position means it is no longer positioned according to the order in the html which permits them to be stacked on top of each other*/
+    z-index: 1;
+    animation: slide1 18s ease-in-out infinite;  
+}
+
+#slide-2{
+    position: absolute;
+    z-index: 1;
+    animation: slide2 18s ease-in-out infinite;  
+}
+
+#slide-3{
+    position: absolute;
+    z-index: 1;
+    animation: slide3 18s ease-in-out infinite;  
+}
+
+.slide-text{
+    padding: 30px 30px;
+    width: 50%;
+    height: auto;
+    font-size: 1.5em;
+}
+
+
+.slide-h1 {
+    margin: 50px 30px;
+}
+
+#slide-buttons{
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    /*the relative position indicates that the top and left properties should be applied in relation to the parent*/
+    top: 90%;
+    left: 10%;
+}
+
+#slide-buttons button{
+    border-radius: 50%;
+    /*the border radius determines the curve of the border with 0% being sharp and 100% being a full circle*/
+    width: 25px;
+    height: 25px;
+    border-style: solid;
+    border-color: white;
+}
+
+.short-input {
+    width: 140px;
+    height: 35px;
+}
+
+#subscr-button{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#subscription-form{
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+textarea {
+    width: 630px;
+    height: 200px;
+    resize: none;
+}
+
+.test-divide{
+    display: flex;
+    flex-basis: 30%;
+    margin-bottom: 50px
+}
+
+.test-divide div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+}
+
+#touch{
+    display: none;
+    margin-right: 20px;
+}
+
+#training-test{
+    width: 90%;
+    height: 940px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245,219,68);
+    padding: 30px;
+    position: relative;
+    margin-bottom: 50px;
+}  
+
+#test-div2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 70%;
+}
+
+#test-div img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+#WASEC{
+    width: 160px;
+    height: 78px;
+}
+
+.WASEC/ACNC{
+    flex-basis: 40%;
+}
+
+
+#wrap-form{
+    flex-direction: row;
+    display: flex;
+}
+
+#wrap-sidebar{
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#wrap-sidebar div:last-child{
+    margin-top: 70px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+    /*the keyframes here apply to the animation property with the name "fadeIn." the 0% represents the beginning of the animation and 100% represents the end of the animation of whatever the specified duration was in the animation property. any number of points from 0 to 100 can be used for keyframes. each keyframe has a corresponding property to be applied to that time*/
+}
+
+
+@keyframes slide1{
+    0%{opacity: 1}
+    32%{opacity: 1}
+    33%{opacity: 0}
+    100%{opacity: 0}
+}
+
+@keyframes slide2{
+    0%{opacity: 0}
+    33%{opacity: 0}
+    34%{opacity: 1}
+    66%{opacity: 1}
+    67%{opacity: 0}
+    100%{opacity: 0}
+    }
+
+@keyframes slide3{
+    0%{opacity: 0}
+    67%{opacity: 0}
+    68%{opacity: 1}
+    100%{opacity: 1}
+}
+
+@keyframes b1{
+     0%{background-color: rgb(60,60,60);}
+    32%{background-color: rgb(60,60,60);}
+    33%{background-color: rgb(255,255,255);}
+    100%{background-color: rgb(255,255,255);}
+    /*colors, opacity and any property there is can be animated with keyframes*/
+}
+
+@keyframes b2{
+    0%{background-color: rgb(255,255,255);}
+    33%{background-color: rgb(255,255,255);}
+    34%{background-color: rgb(60,60,60);}
+    66%{background-color: rgb(60,60,60);}
+    67%{background-color: rgb(255,255,255);}
+    100%{background-color: rgb(255,255,255);}
+    }
+
+@keyframes b3{
+    0%{background-color: rgb(255,255,255);}
+    67%{background-color: rgb(255,255,255);}
+    68%{background-color: rgb(60,60,60);}
+    100%{background-color: rgb(60,60,60);}
+}
+
+@media screen and (max-width: 1300px){
+    #training-test{
+        height: 1000px; 
+} 
+    #test-div2{
+    top: 63%;
+}
+}
+
+@media screen and (max-width: 1000px){
+    /*all the styles here are triggered when the screen is below 1000px in width and are de-activated above it. with media queries i can change the properties above to accommodate smaller screens and that includes font sizes, container widths and heights, flex directions, padding and margin sizes*/
+#ACNC{
+    width: 52.5px;
+    height: 52.5px;
+}
+  
+#article-home{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    /*the configuration of the grid can be changed to add or subtract rows and columns with different sccreen sizes for a true responsive design*/
+        grid-gap: 30px 20px;
+}
+    
+#article-training{
+        grid-row-gap: 15px;
+        grid-column-gap: 45px;
+}
+    
+.article-blog1{
+        display: flex;
+        flex-direction: column;
+        grid-column: 4/6;
+        grid-row: span 1;
+}
+
+.article-blog2{
+        display: flex;
+        flex-direction: column;
+        grid-column: 4/6;
+        grid-row: span 1;
+}
+
+.article-blog3{
+        display: flex;
+        flex-direction: column;
+        grid-column: 4/6;
+        grid-row: span 1;
+}
+    
+        
+aside{
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        padding: 30px; 
+        grid-column: span 6;
+        grid-row: 4/5; 
+}
+    
+#banner-featured{
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+#banner-featured h2{
+         font-size: 1.9em;
+}
+    
+.banner-image{
+        width: 695px;
+        height: 309.1px;
+}
+    
+.button{
+        font-size: 0.9em;
+}
+    
+#blog{
+        grid-template-columns: 1fr, 4fr, 4fr, 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-row-gap: 50px;
+        grid-column-gap: 10px;
+        margin: 0px;
+}
+    
+.blogimg1{
+        grid-column: 2/4;
+        grid-row: span 1;
+}
+
+.blogimg2{
+        grid-column: 2/4;
+        grid-row: span 1;
+}
+
+.blogimg3{
+        grid-column: 2/4;
+        grid-row: span 1;
+}
+    
+#blog-bottom{
+        font-size: 1.6em;
+}
+    
+#blog-tags div{
+         font-size: 0.7em;
+}
+   
+#contact-form{
+        width: 70%;
+}
+        
+#events figure{
+        flex-wrap: wrap;
+}
+
+#events{
+        height: 900px;
+}
+    
+.events-img{
+        width: 100%;
+}
+
+.footer-media{
+        flex-basis: 50%;
+}
+    
+.footer-media img{
+        width: 45px;
+        height: 45px;
+}
+    
+#footr-image {
+        flex-basis: 20%;
+}
+    
+#footr-image img{
+        height: 100px;
+        width: 100px;
+        align-self: center;
+}
+  
+        
+#footer-text{
+        flex-basis: 30%;
+}
+    
+#footer-wrap-link{
+        flex-basis: 50%;
+}
+    
+#hero{
+        width: 80vw;
+        height: 85vh;
+}
+    
+header h2{
+        font-size: 2em;
+}
+    
+h1{
+        font-size: 1.6em;
+        padding: 20px 30px;
+}
+    
+h3{
+        font-size: 0.9em
+}
+    
+#map-contain iframe{
+        width: 420px;
+        height: 315px;
+}
+    
+#iframe-rsc{
+        width: 504px; 
+        height: 283.5px; 
+}
+    
+li{
+        display: inline;
+}
+ 
+#media-logo-wrap{
+        display: flex;
+        flex-direction: column;
+}
+    
+.nav-a-top{
+        display: none;
+    /*using the display property with media queries allows me to hide or reveal elements at different screen sizes. here the nav that is adapted for computer screens is hidden and the custom nav for mobile with a lone icon is revealed by changing their display values*/
+}
+    
+#nav-footer{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+}
+    
+#nav-footer a {
+        padding: 10px;
+}
+    
+#nav-top{
+        justify-content: flex-end;
+}
+    
+nav label{
+        display: inline;
+}
+    
+#nav-logo {
+        display: none;
+}
+
+#nav-logo-condensed{
+        display: flex;
+        justify-content: flex-start;
+        align-self: center;
+        padding-left: 20px;
+        flex: 1 2 30%;
+}
+    
+ .quote{
+    flex-basis: 45%;
+}  
+    
+.resources-content{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+}
+    
+.resources-content>div{
+        width: 80%;
+        padding-right: 0px;
+        align-self: center;
+        /*according to the order of the html the div should be on top, but with the flex order property i can reverse this*/
+}
+    
+.resources-content div:first-child{
+    order: 2;
+}
+
+.resources-content img{
+    width: 100%;
+    height: auto;
+    order: 1;
+}
+.contain-rsc-img{
+        align-self: center;
+        margin-top: 50px; 
+}
+
+#search-bar1{
+        display: none;
+}
+
+.section-about h2{
+        font-size: 1.1em;
+}
+    
+.section{
+        width: 85%;
+}
+    
+#section-img{
+        width: 50vw;
+}
+    
+#section-donation{
+        display: flex;
+        flex-direction:column;
+        width: 100%;     
+}
+    
+.section-supporters{
+        width: 45%;
+}
+    
+.section-training{
+        grid-area: span 1/ span 1;
+        display: none;
+}
+
+.section-training-mobile{
+        grid-area: span 1/ span 1;
+        display: flex;
+        flex-direction: column;
+}
+    
+.section-training-mobile div{
+        display: flex;
+        justify-content: flex-start;
+}
+    
+.section-training img{
+        height: 30px;
+        width: 30px;
+        padding-right: 10px;
+}
+    
+.section-training2{
+        display: flex;
+        flex-direction:column;
+}
+    
+.slide-text{
+        padding: 0px 30px;
+        width: 60%;
+}
+    
+.slide-h1 {
+         margin: 10px 0px;
+        width: 50%;
+}
+       
+#subscription-form{
+        width: 60%
+}
+
+p{
+        font-size: 0.8em;
+}
+    
+#payment-form{
+        margin-left: 30px;
+        width: 100%;
+}
+    
+#payment-form div:nth-child(10){
+    /*this selector targets the tenth div among its div sibling elements*/
+        flex-basis: 100%; 
+}
+
+.test-divide{
+    flex-basis: 40%;
+}
+
+#touch{
+        display: none;
+}
+    
+#touch:checked ~ ul{
+    /*when the input that has the hamburger icon is selected or "checked" the styles for the unordered list below are applied*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(93,115,245);
+        padding: 30px 20px;
+        width: 240px;
+        height: 360px;
+        font-size: 0.8em;
+        position: absolute;
+        right: 25px;
+        top: 110px;
+        z-index: 1;
+}
+
+#training-test{
+        height: 790px;
+}
+    
+#test-div2{
+        top: 59%;
+}
+    
+ul div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; 
+        flex-basis: 50%;
+}
+
+#WASEC{
+        width: 112px;
+        height: 54.6px;
+}
+    
+.WASEC/ACNC{
+        flex-basis: 50%;
+}
+
+#wrap-sidebar{
+        display: inherit;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+}
+    
+#wrap-sidebar div:last-child{
+        align-self: flex-end;
+         margin-top: 0px;
+}
+}
+
+@media screen and (max-width: 750px){
+    
+.article-blog1{
+         display: flex;
+        flex-direction: column;
+        grid-column: 2/6;
+        grid-row: 2/3;
+}
+
+.article-blog2{
+        display: flex;
+        flex-direction: column;
+        grid-column: 2/6;
+        grid-row: 4/5;
+}
+
+.article-blog3{
+        display: flex;
+        flex-direction: column;
+        grid-column: 2/6;
+        grid-row: 6/7;
+}
+    
+aside{
+        height: auto;
+        grid-column: 1/7;
+        grid-row: 7/8; 
+}
+  
+.banner-image{
+        width: 486.5px;
+        height: 216.37px;
+}
+    
+#blog{
+        grid-template-columns: 1fr, 5fr, 1fr;
+        grid-template-rows: repeat (7, 1fr);
+        margin: 0px;
+        grid-column-gap: 0px;
+}
+    
+.blogimg1{
+        grid-column: 2/6;
+        grid-row: 1/2;
+}
+
+.blogimg2{
+        grid-column: 2/6;
+        grid-row: 3/4;
+}
+
+.blogimg3{
+        grid-column: 2/6;
+        grid-row: 5/6;
+}
+
+.test-divide{
+         flex-basis: 90%;
+}
+
+#training-test{
+        height: 730px;
+}
+    
+#test-div2{
+    top: 45%;
+}
+  
+textarea {
+        height: 530px;
+        width: 300px;
+}
+    
+#wrap-sidebar{
+        flex-direction: column;
+        width: auto;
+}
+    
+#wrap-sidebar div:last-child{
+        align-self: flex-start;
+}
+}
+
+@media screen and (max-width: 500px){
+    /*the 500px width targets most mobile devices so the styles below are adapted to mobile devices*/
+#article-about{
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: repeat(6, 1fr 1fr);
+        width: auto;
+        grid-gap: 0px;
+}
+    
+#article-home{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 50px 20px;
+}
+
+#events{
+        height: 586px;
+}
+    
+.banner-image{
+        width: 388.8px;
+        height: 173px;
+}
+    
+#banner-image{
+        width: 90%;
+}
+    
+#footr-image{
+        flex-basis: 20%;
+}
+    
+.footer-media img{
+        width: 35px;
+        height: 35px;
+}
+    
+footer {
+        height: 490px;
+        padding: 15px 15px;
+}
+    
+footer>p{
+        font-size: 0.7em;
+}
+
+#footer-text2{
+        font-size: 0.8em;
+        flex-basis: 90%;
+}
+    
+#hero{
+        height: 80vh;
+        width: 80vw;
+}
+    
+#map-contain iframe{
+        width: 294px;
+        height: 220.5px;
+}
+
+#iframe-rsc{
+        width: 392px; 
+        height: 220.5px; 
+}
+    
+#media-logo-wrap{
+        flex-wrap: wrap;
+}
+    
+.profile-pic{
+        grid-column: 2/3;
+        grid-row: span 1;
+}
+    
+p{
+        font-size: 0.73em;
+}
+
+.quote{
+        flex-basis: 80%;       
+}
+.section-about p{
+        flex-basis: 0%
+}
+    
+        
+.section-about{
+        flex-direction: column;
+        grid-column: 1/6;
+        grid-row: span 1;
+}
+    
+.section-about h2{
+        flex-basis: 0%;
+        border-left: none;
+        border-bottom: 5px solid;
+        padding-bottom: 15px;
+        padding-left: 0px;
+        margin-left: 0px;
+}
+    
+.section-supporters{
+        width: 45%;
+        padding: 50px 60px;
+        flex-direction: column;
+}
+    
+.section-supporters div{
+         width: 50%;
+}
+     
+.slide-h1 {
+        width: 50%;
+}
+
+
+#training-test{
+        height: 900px;
+}
+    
+#test-div2{
+    top: 25%;
+}
+      
+}
