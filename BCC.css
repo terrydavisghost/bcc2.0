@@ -1047,6 +1047,13 @@ p span{
     justify-content: center;
 }
 
+.subscr-button{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
 #subscription-form{
     width: 768px;
     display: flex;
@@ -1456,7 +1463,8 @@ nav label{
 #section-donation{
         display: flex;
         flex-direction:column;
-        width: 100%;     
+        width: 100%;
+        box-sizing: border-box;
 }
     
 .section-supporters{
